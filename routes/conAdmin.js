@@ -25,10 +25,5 @@ router.get('/:username/:password', function(req, res, next) {
             console.log('Error getting documents', err);
         });
 });
-// add hospital
-router.post('/addHospital',function (req,res,next) {
-   let username = req.body.username;
-   let password = req.body.password;
 
-});
 module.exports = router;

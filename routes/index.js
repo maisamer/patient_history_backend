@@ -1,14 +1,18 @@
 var express = require('express');
 var router = express.Router();
 var admin = require("firebase-admin");
-
-var serviceAccount = require("../patient-history-12cb8-firebase-adminsdk-51qrh-5cdf54664b.json");
-
+const serviceAccountPath = "C://Users//go//Downloads//patient-history-c41dda1dd688.json";
+var serviceAccount = require(serviceAccountPath);
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
+  storageBucket: "patient-history-12cb8.appspot.com"
   //databaseURL: "https://patient-history-12cb8.firebaseio.com"
 });
 const db = admin.firestore();
+
+
+
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

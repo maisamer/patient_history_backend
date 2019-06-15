@@ -9,6 +9,9 @@ var patentRouter = require('./routes/patient');
 var adminRouter = require('./routes/conAdmin');
 var clinicRouter = require('./routes/clinic');
 var appointmentRouter = require('./routes/appointment');
+var hospitalRouter = require('./routes/hostpital');
+var labRouter = require('./routes/lab');
+var adRouter = require('./routes/ad');
 var app = express();
 
 
@@ -22,7 +25,10 @@ app.use('/doctors', indexRouter);
 app.use('/patient',patentRouter);
 app.use('/admin',adminRouter);
 app.use('/clinic',clinicRouter);
-app.use('/clinic/appointment',appointmentRouter);
+app.use('/hospital',hospitalRouter);
+app.use('/ad',adRouter);
+app.use('/lab',labRouter);
+app.use('/appointment',appointmentRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
