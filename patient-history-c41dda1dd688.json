@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "patient-history-12cb8",
+  "private_key_id": "c41dda1dd68880cabd4f49b2feed52b2e225b5cf",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCdgZhLrywdNgVM\n84kmxXW1CuapGY0NOBjEzHZpJEN7HZ5s/NXAxhYwa4I22ju7B0GzvuE8llgK6CLT\n/U7TCpI91bPbjfvUZVhPfup+n4dog/Z9OySduYvdgK9hIoXrlAJSaP3KLg+hk+kk\nW2/xiwIVbH6qjz1DNoY4OdZ38U6ZNjQcoV1faUi2KWlKXIQ4M6We8eZCQxBHG8iu\nR1w4idvlm3g6aRZ8h8sZsENaLiY8v1gKxTx4RI8L0Sy9E5kw5frUuGjQVomp6vmI\nurNiSO6Edu4tLenhtB+0VflrJsgl5cxW0Ba/+02QMymphE3XoUwtafYDexgYQ9jq\nm+6Uv+P/AgMBAAECggEAGEkYK2tKGQLwVEoktpaxrIWOxToMVqJ0pzuDcnjF8uDB\nQbrGVp/0YejhvgVuOktHJSjkX8wqrRvX6une0omJvQELZ2oAD2LE+BTwoS+F2Gao\nheytm6g1WaTy5b5F+enrZbuMjjUF8fr1csaqfwrY+matLS1C2+83SMoaOIo7fUHx\nWU5D5u54GFFMli2T9mQ7OqoBzqaldw3thrblOt3ed2PODNQwkMsd9/YveV70y++y\nwJISUHnfHRoORjUw8xgxQjl7wZvZ9JXryayTNFdZ55gciYIDXIai1+bFnBDOfOTt\nfudyWGSfR4Y3IeSCQ4d+BvzF06vW9nSaLg4k5HnlwQKBgQDPAXPG/dzn9hk/Qyhv\nSooGRIWrQIiOU6WOWlwbxc49ypWbtiPZWox20NewD3Zc5XH3f3VHqqbQUIIWN1d8\npEh6Patvf4axzPCLL1FDihnoggPfG7zDiNPfOsNDRvjUOHDaj5cudYRDIuyjFGSb\nsOGcfJ9VAP42PHb6aAMq7z0QIQKBgQDCyPQmZlo3SK3r3yvrr3Z1GUh46AdERTRl\nOjG7ed/jL079TuK68RheNqb8VnzBCMEcVpjE4friGT47OYSzvD1TVT1PxzugBBjZ\nBAB0tfGBnZGvMEjsN6NJ9iZrykixBy+E+RS/3KSZe/TohWAKUAyjCWo2ZJ1lIcIp\ngeeN5bzwHwKBgQDCeOnM+3gKT5Bed3hIPa23v64YObNQitLRDqDT0pw0PtsYgx/g\ntYmaog7Pr2cSVNghnROQNYkr0Ua1Gl7NkQUqGj+xqwveg9tD1zswCVDXtzVt6AAJ\nbsUlRW5mCQoBTdjv69Aq7GpKLEhF2QW/oogB3K5PTHSGfX2FOCwprMIgIQKBgHe8\nS8jnFgHx3WenEjqY63pkBla8Wusul1y6fyO9cVEYHbg8q8c6uT4A3nkzORD4Lq0a\n1mIAf9ZIqiaB3v8VcaUuOrg1woNEwXl1qkoUJdcFYy6Lwefi869dbpTIDhM0VZOq\nAYVHPq9SsWPVyQnN11bJTM8O3mnybIZTYmGpnZEFAoGAO8wdHjC1Uw6LRX/cucxT\nWwGUWPEGkpvYoXI3iFL6ZVGVhybllVaTzV4ES7q54xoyBfyYJe3bjlUsQhvzm0WS\nanRNih1W77m7FuVextNifqDlzLhBBuclrGIgh1GZMPp3o6YuxveaRcxFACzOBEkp\nWDWIWlLttHAkQmWylo4rlag=\n-----END PRIVATE KEY-----\n",
+  "client_email": "patient-history@patient-history-12cb8.iam.gserviceaccount.com",
+  "client_id": "107596970424910748063",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/patient-history%40patient-history-12cb8.iam.gserviceaccount.com"
+}
