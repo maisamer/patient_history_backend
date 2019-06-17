@@ -5,6 +5,7 @@ const Multer = require('multer');
 const configration = require('../Controller/configration');
 const fileConfigration = require('../Controller/fileConfigration');
 var mail = require('../Controller/Email');
+let FieldValue = require('firebase-admin').firestore.FieldValue;
 const multer = Multer({
     storage: Multer.memoryStorage(),
     limits: {
