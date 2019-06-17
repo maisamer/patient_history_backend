@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/doctors', indexRouter);
+app.use('/doctor', indexRouter);
 app.use('/patient',patentRouter);
 app.use('/admin',adminRouter);
 app.use('/clinic',clinicRouter);
@@ -29,6 +29,7 @@ app.use('/hospital',hospitalRouter);
 app.use('/ad',adRouter);
 app.use('/lab',labRouter);
 app.use('/appointment',appointmentRouter);
+//app.use('/',);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
