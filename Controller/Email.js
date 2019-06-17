@@ -47,9 +47,6 @@ exports.registrationMailPlace = (mail,username,password)=>{
                 console.log(error);
                 reject(error)
             } else {
-                if(info.rejected){
-                    console.log('rejected mail');
-                }
                 console.log('Email sent: ' + info.response);
                 resolve('Email sent: ' + info.response);
             }
