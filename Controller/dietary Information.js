@@ -1,7 +1,7 @@
 let DietaryInformationModel = require('../Model/dietary Information');
 let DietaryInformationPatientModel = require('../Model/patient_Dietary_Information');
 
-exports.addPhysicalExam = (req,res,next)=>{
+exports.add = (req,res,next)=>{
     let patient = req.body.username;
     let restrictions = req.body.restrictions;
     let suplemenets = req.body.suplemenets;
@@ -30,7 +30,7 @@ exports.addPhysicalExam = (req,res,next)=>{
         res.json({status:404,message:'missing data'});
     }
 };
-exports.updatePhysicalExam = (req,res,next)=>{
+exports.update = (req,res,next)=>{
     let id = req.body.id;
     let restrictions = req.body.restrictions;
     let suplemenets = req.body.suplemenets;
@@ -53,7 +53,7 @@ exports.updatePhysicalExam = (req,res,next)=>{
         res.json({status:404,message:'missing data'});
     }
 };
-exports.deletePhysicalExam = (req,res,next)=>{
+exports.delete = (req,res,next)=>{
     let id = req.body.id;
     let username = req.body.username;
     if(id != null && id != undefined && username != null && username != undefined){

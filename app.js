@@ -40,6 +40,7 @@ app.use('/physicalExam',PhysicalExamRouter);
 app.use('/socialHabit',socialHabitRouter);
 app.use('/allergies',allergiesRouter);
 
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
