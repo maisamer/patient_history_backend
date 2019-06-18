@@ -14,6 +14,7 @@ var labRouter = require('./routes/lab');
 var adRouter = require('./routes/ad');
 var pharmacyRouter = require('./routes/pharmacy');
 var sessionRouter = require('./routes/session');
+var PhysicalExamRouter = require('./routes/Physical_Exam');
 var app = express();
 
 
@@ -33,7 +34,8 @@ app.use('/pharmacy',pharmacyRouter);
 app.use('/session',sessionRouter);
 app.use('/lab',labRouter);
 app.use('/appointment',appointmentRouter);
-//app.use('/',);
+app.use('/physicalExam',PhysicalExamRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
