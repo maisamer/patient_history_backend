@@ -34,12 +34,11 @@ exports.addSocial_habit = (req,res,next)=>{
 };
 exports.updateSocial_habit = (req,res,next)=>{
     let id = req.body.id;
-    let patient = req.body.username;
     let tobacco = req.body.tobacco;
     let alcohol = req.body.alcohol;
     let illicit_drugs = req.body.illicit_drugs;
     let date = req.body.date;
-    if(id != null && id != undefined && patient != null && patient != undefined && tobacco != null && tobacco != undefined && alcohol != null && alcohol != undefined && date != null && date != undefined && illicit_drugs !=null && illicit_drugs!= undefined ){
+    if(id != null && id != undefined && tobacco != null && tobacco != undefined && alcohol != null && alcohol != undefined && date != null && date != undefined && illicit_drugs !=null && illicit_drugs!= undefined ){
         let social_habit = {
             tobacco:tobacco,
             alcohol:alcohol,
