@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46550de5-da8f-4174-ad4c-b748b6414586" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Controller/Physical_Exam.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Model/Physical_Exam.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Model/Physical_Exam_patient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Model/medicine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/Physical_Exam.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/Social Habit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controller/allergies.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/Social Habit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/allergies.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/patient_Allergies.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Model/social_Habit_patient.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/Social Habit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/allergies.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/Physical_Exam.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/Physical_Exam.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,35 +47,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="22" />
+            <state relative-caret-position="306">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/Physical_Exam.js">
+        <entry file="file://$PROJECT_DIR$/routes/Physical_Exam.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-172">
-              <caret line="2" column="42" lean-forward="true" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+            <state relative-caret-position="119">
+              <caret line="7" column="24" lean-forward="true" selection-end-line="7" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controller/Physical_Exam.js">
+        <entry file="file://$PROJECT_DIR$/routes/allergies.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="53" column="83" lean-forward="true" selection-start-line="53" selection-start-column="83" selection-end-line="53" selection-end-column="83" />
+            <state relative-caret-position="34">
+              <caret line="2" column="40" lean-forward="true" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Model/Physical_Exam_patient.js">
+        <entry file="file://$PROJECT_DIR$/Controller/Social Habit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="30" column="56" lean-forward="true" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="70" />
+            <state relative-caret-position="918">
+              <caret line="54" column="10" lean-forward="true" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/allergies.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -116,11 +129,19 @@
         <option value="$PROJECT_DIR$/Controller/session.js" />
         <option value="$PROJECT_DIR$/routes/Physical_Exam.js" />
         <option value="$PROJECT_DIR$/routes/Physical_Exam_Patient.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/Model/Physical_Exam.js" />
         <option value="$PROJECT_DIR$/Controller/Physical_Exam_patient.js" />
         <option value="$PROJECT_DIR$/Model/Physical_Exam_patient.js" />
+        <option value="$PROJECT_DIR$/Model/Social Habit.js" />
+        <option value="$PROJECT_DIR$/Model/social_Habit_patient.js" />
+        <option value="$PROJECT_DIR$/routes/Social Habit.js" />
+        <option value="$PROJECT_DIR$/Model/Allergies.js" />
         <option value="$PROJECT_DIR$/Controller/Physical_Exam.js" />
+        <option value="$PROJECT_DIR$/Model/patient_Allergies.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/Controller/allergies.js" />
+        <option value="$PROJECT_DIR$/routes/allergies.js" />
+        <option value="$PROJECT_DIR$/Controller/Social Habit.js" />
       </list>
     </option>
   </component>
@@ -130,7 +151,9 @@
     <option name="width" value="1750" />
     <option name="height" value="980" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -220,7 +243,7 @@
       <workItem from="1560683387961" duration="32846000" />
       <workItem from="1560755534508" duration="8342000" />
       <workItem from="1560775873341" duration="29727000" />
-      <workItem from="1560857053509" duration="19728000" />
+      <workItem from="1560857053509" duration="24835000" />
     </task>
     <task id="LOCAL-00001" summary="lab function">
       <created>1560639346919</created>
@@ -257,11 +280,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560866136554</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Physical Exam functions">
+      <created>1560882858402</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1560882858402</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201189000" />
+    <option name="totallyTimeSpent" value="206296000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -273,16 +303,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24563758" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24563758" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3371105" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3371105" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -329,11 +359,10 @@
     <MESSAGE value="hospital functions" />
     <MESSAGE value="pharmacy functions" />
     <MESSAGE value="session functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="session functions" />
+    <MESSAGE value="Physical Exam functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Physical Exam functions" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/users.js" />
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css" />
     <entry file="file://$PROJECT_DIR$/views/index.pug" />
     <entry file="file://$PROJECT_DIR$/views/layout.pug" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -538,10 +567,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/Physical_Exam_patient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/social_Habit_patient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/Social Habit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/Social Habit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/Physical_Exam_patient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="28" column="43" lean-forward="true" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/Physical_Exam.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/Physical_Exam.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="46" lean-forward="true" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/patient_Allergies.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/allergies.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/Physical_Exam.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="7" selection-end-column="24" />
+        <state relative-caret-position="119">
+          <caret line="7" column="24" lean-forward="true" selection-end-line="7" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -552,38 +651,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/Physical_Exam_patient.js">
+    <entry file="file://$PROJECT_DIR$/Controller/allergies.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        <state relative-caret-position="51">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/routes/allergies.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="22" />
+        <state relative-caret-position="34">
+          <caret line="2" column="40" lean-forward="true" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/Physical_Exam.js">
+    <entry file="file://$PROJECT_DIR$/Controller/Social Habit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-172">
-          <caret line="2" column="42" lean-forward="true" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/Physical_Exam.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="53" column="83" lean-forward="true" selection-start-line="53" selection-start-column="83" selection-end-line="53" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/Physical_Exam_patient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="30" column="56" lean-forward="true" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="70" />
+        <state relative-caret-position="918">
+          <caret line="54" column="10" lean-forward="true" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
         </state>
       </provider>
     </entry>

@@ -15,6 +15,8 @@ var adRouter = require('./routes/ad');
 var pharmacyRouter = require('./routes/pharmacy');
 var sessionRouter = require('./routes/session');
 var PhysicalExamRouter = require('./routes/Physical_Exam');
+var socialHabitRouter = require('./routes/Social Habit');
+
 var app = express();
 
 
@@ -35,7 +37,7 @@ app.use('/session',sessionRouter);
 app.use('/lab',labRouter);
 app.use('/appointment',appointmentRouter);
 app.use('/physicalExam',PhysicalExamRouter);
-
+app.use('/socialHabit',socialHabitRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

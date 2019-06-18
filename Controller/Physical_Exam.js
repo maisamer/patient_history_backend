@@ -29,16 +29,17 @@ exports.addPhysicalExam = (req,res,next)=>{
     }
 };
 exports.updatePhysicalExam = (req,res,next)=>{
+    let id = req.body.id;
     let blood_pressure = req.body.blood_pressure;
     let heart_rate = req.body.heart_rate;
     let date = req.body.date;
-    if(blood_pressure != null && blood_pressure != undefined && heart_rate != null && heart_rate != undefined && date != null && date != undefined){
+    if(id != null && id != undefined && blood_pressure != null && blood_pressure != undefined && heart_rate != null && heart_rate != undefined && date != null && date != undefined){
         let PhysicalExam = {
             heart_rate:heart_rate,
             blood_pressure:blood_pressure,
             date : date
         };
-        physicalExamModel.updatePhysicalExam(PhysicalExam).then(success=>{
+        physicalExamModel.updatePhysicalExam(id,PhysicalExam).then(success=>{
             res.json({status:200,message:'Physical Exam updated successfully',id:success});
         }).catch(err=>{
             res.json({status:404,message:'error in connection please try again'});
