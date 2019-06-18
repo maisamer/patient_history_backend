@@ -1,6 +1,6 @@
 var admin = require("firebase-admin");
 const db = admin.firestore();
-const collection = db.collection('family_Diseases');
+const collection = db.collection('diseases');
 
 exports.insert=(item)=>{
     return new Promise((resolve, reject) => {
@@ -20,7 +20,6 @@ exports.update=(id,item)=>{
         })
     });
 };
-// delete post
 exports.delete=(id)=>{
     return new Promise((resolve, reject) => {
         collection.doc(id).delete().then(()=>{
@@ -30,7 +29,7 @@ exports.delete=(id)=>{
         })
     });
 };
-// get all family diseases related to patient
+// get all diseases related to patient
 exports.get=(username)=>{
     return new Promise((resolve, reject) => {
         collection.where('username','==',username).get().then(docs=>{

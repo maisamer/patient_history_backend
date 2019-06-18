@@ -19,6 +19,8 @@ var socialHabitRouter = require('./routes/Social Habit');
 var allergiesRouter = require('./routes/allergies');
 var remediesRouter = require('./routes/Remedies');
 var postRouter = require('./routes/post');
+var diseaseRouter = require('./routes/disease');
+var  familyDiseaseRouter = require('./routes/family_Diseases');
 var app = express();
 
 
@@ -43,6 +45,8 @@ app.use('/socialHabit',socialHabitRouter);
 app.use('/allergies',allergiesRouter);
 app.use('/remedies',remediesRouter);
 app.use('/post',postRouter);
+app.use('/disease',diseaseRouter);
+app.use('/familyDisease',familyDiseaseRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
