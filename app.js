@@ -12,6 +12,8 @@ var appointmentRouter = require('./routes/appointment');
 var hospitalRouter = require('./routes/hostpital');
 var labRouter = require('./routes/lab');
 var adRouter = require('./routes/ad');
+var pharmacyRouter = require('./routes/pharmacy');
+var sessionRouter = require('./routes/session');
 var app = express();
 
 
@@ -27,6 +29,8 @@ app.use('/admin',adminRouter);
 app.use('/clinic',clinicRouter);
 app.use('/hospital',hospitalRouter);
 app.use('/ad',adRouter);
+app.use('/pharmacy',pharmacyRouter);
+app.use('/session',sessionRouter);
 app.use('/lab',labRouter);
 app.use('/appointment',appointmentRouter);
 //app.use('/',);
