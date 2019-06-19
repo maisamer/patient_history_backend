@@ -11,7 +11,6 @@ var clinicRouter = require('./routes/clinic');
 var appointmentRouter = require('./routes/appointment');
 var hospitalRouter = require('./routes/hostpital');
 var labRouter = require('./routes/lab');
-var adRouter = require('./routes/ad');
 var pharmacyRouter = require('./routes/pharmacy');
 var sessionRouter = require('./routes/session');
 var PhysicalExamRouter = require('./routes/Physical_Exam');
@@ -21,6 +20,7 @@ var remediesRouter = require('./routes/Remedies');
 var postRouter = require('./routes/post');
 var diseaseRouter = require('./routes/disease');
 var  familyDiseaseRouter = require('./routes/family_Diseases');
+var adsRouter = require('./routes/ads');
 var app = express();
 
 
@@ -35,7 +35,6 @@ app.use('/patient',patentRouter);
 app.use('/admin',adminRouter);
 app.use('/clinic',clinicRouter);
 app.use('/hospital',hospitalRouter);
-app.use('/ad',adRouter);
 app.use('/pharmacy',pharmacyRouter);
 app.use('/session',sessionRouter);
 app.use('/lab',labRouter);
@@ -47,6 +46,7 @@ app.use('/remedies',remediesRouter);
 app.use('/post',postRouter);
 app.use('/disease',diseaseRouter);
 app.use('/familyDisease',familyDiseaseRouter);
+app.use('/ads',adsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

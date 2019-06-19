@@ -3,6 +3,7 @@ var router = express.Router();
 var admin = require("firebase-admin");
 const Multer = require('multer');
 var mail = require('../Controller/Email');
+var workspace = require('../Model/workspace');
 const configration = require('../Controller/configration');
 const fileConfigration = require('../Controller/fileConfigration');
 let FieldValue = require('firebase-admin').firestore.FieldValue;
@@ -46,7 +47,9 @@ router.post('/register',function (req,res,next) {
                     })
                     .then(ref => {
                         console.log('Added document with ID: ', ref.id);
-                        res.json({status: 200, message: 'email send please check your inbox'});
+                        workspace.insert({username:username}).then(success=>{
+                            res.json({status: 200, message: 'email send please check your inbox'});
+                        });
                     }).catch(err => {
                         res.json({status: 404, message: 'error in db connection'});
                     })
