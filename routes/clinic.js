@@ -40,6 +40,7 @@ router.post('/register',function (req,res,next) {
                      })
                 }).catch(err => {
                     console.log('Error adding documents', err);
+                    res.json({status: 404, message: 'error in adding document'});
                 });
             }).catch(err => {
                 res.json({status: 404, message: 'doctor not found'});

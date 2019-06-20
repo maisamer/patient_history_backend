@@ -54,7 +54,8 @@ router.post('/register',function (req,res,next) {
                         res.json({status: 404, message: 'error in db connection'});
                     })
                     }).catch(err => {
-                    console.log('invalid email address', err);
+                    //console.log('invalid email address', err);
+                    res.json({status: 404, message: 'error in connection please try again'});
                 });
             });
         })

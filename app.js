@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
+var doctorRouter = require('./routes/doctor');
 var patentRouter = require('./routes/patient');
 var adminRouter = require('./routes/conAdmin');
 var clinicRouter = require('./routes/clinic');
@@ -21,6 +21,7 @@ var postRouter = require('./routes/post');
 var diseaseRouter = require('./routes/disease');
 var  familyDiseaseRouter = require('./routes/family_Diseases');
 var adsRouter = require('./routes/ads');
+var medicineRouter = require('./routes/medicine');
 var app = express();
 
 
@@ -30,7 +31,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/doctor', indexRouter);
+//CORS validation
+app.use((req,res,next)=>{
+  res.setHeader('Access-Control-Allow-Origin','*');
+  res.setHeader('Access-Control-Allow-Methods','GET, POST , DELETE ,PATCH');
+  res.setHeader('Access-Control-Allow-Headers','Content-Type, Authorization');
+  next();
+});
+
+app.use('/doctor', doctorRouter);
 app.use('/patient',patentRouter);
 app.use('/admin',adminRouter);
 app.use('/clinic',clinicRouter);
@@ -47,6 +56,7 @@ app.use('/post',postRouter);
 app.use('/disease',diseaseRouter);
 app.use('/familyDisease',familyDiseaseRouter);
 app.use('/ads',adsRouter);
+app.use('/medicine',medicineRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
