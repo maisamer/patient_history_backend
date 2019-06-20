@@ -1,6 +1,6 @@
 var admin = require("firebase-admin");
 const bucket = admin.storage().bucket();
-exports. uploadFileToStorage = (file) => {
+exports.uploadFileToStorage = (file) => {
     return new Promise((resolve, reject) => {
         if (!file) {
             reject('No image file');

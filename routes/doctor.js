@@ -6,5 +6,5 @@ router.post('/add',controller.add);
 router.post('/delete',controller.delete);
 router.post('/login',controller.login);
 router.post('/rate',controller.rate);
-
+router.post('/get',controller.get);
 module.exports = router;

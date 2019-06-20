@@ -232,13 +232,13 @@ router.post('/updatephone',function (req,res,next){
 })
 router.post('/forgetPassword',function (req,res,next) {
     let username = req.body.username;
-    configration.checkUsername('lab',username).then(success=> {
+    configration.checkUsername('lab',username).then(id=> {
         configration.getEmail('lab', success).then(email => {
             //console.log(success);
             let tempPassword = Math.random().toString(36).substring(7);
             mail.sendEmail(email, tempPassword).then(success => {
                 // add temp password
-                labCollection.doc(success).update({tempPassword: tempPassword}).then(() => {
+                labCollection.doc(id).update({tempPassword: tempPassword}).then(() => {
                     res.json({status: 200, message: 'mail send please check your inbox'});
                 }).catch(err => {
                     res.json({status: 404, message: 'failed in connection please try again'});

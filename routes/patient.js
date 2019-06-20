@@ -3,6 +3,8 @@ var router = express.Router();
 var fs = require('fs');
 var admin = require("firebase-admin");
 const pdfjs = require('pdfjs-dist');
+const fileConf = require('../Controller/fileConfigration');
+const control = require('../Controller/patient');
 
 const Multer = require('multer');
 
@@ -109,7 +111,7 @@ router.post('/add',multer.single('file'),function (req,res,next) {
     console.log(username,password);
     if(username != null && password != undefined && username != null && password != undefined) {
         if (file) {
-            uploadImageToStorage(file)
+            fileConf.uploadFileToStorage(file)
                 .then((success) => {
                     console.log('success',success)
                     patientCollection.add({
@@ -134,35 +136,6 @@ router.post('/add',multer.single('file'),function (req,res,next) {
 }
 
 });
-const uploadImageToStorage = (file) => {
-    return new Promise((resolve, reject) => {
-        if (!file) {
-            reject('No image file');
-        }
-        console.log(file);
-        let newFileName = `${file.originalname}_${Date.now()}`;
+router.post('/login',)
 
-        let fileUpload = bucket.file(newFileName);
-
-        const blobStream = fileUpload.createWriteStream({
-            metadata: {
-                contentType: file.mimetype
-            }
-        });
-
-        blobStream.on('error', (error) => {
-            console.log(error);
-            reject('Something is wrong! Unable to upload at the moment.');
-        });
-
-        blobStream.on('finish', () => {
-            // The public URL can be used to directly access the file via HTTP.
-            const url = fileUpload.name;
-
-            resolve(url);
-        });
-
-        blobStream.end(file.buffer);
-    });
-}
 module.exports = router;

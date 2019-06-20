@@ -197,13 +197,13 @@ router.post('/updatephone',function (req,res,next){
 //forget password
 router.post('/forgetPassword',function (req,res,next) {
     let username = req.body.username;
-    configration.checkUsername('pharmacy',username).then(success=> {
+    configration.checkUsername('pharmacy',username).then(id=> {
         configration.getEmail('pharmacy', success).then(email => {
             //console.log(success);
             let tempPassword = Math.random().toString(36).substring(7);
             mail.sendEmail(email, tempPassword).then(success => {
                 // add temp password
-                pharmacyCollection.doc(success).update({tempPassword: tempPassword}).then(() => {
+                pharmacyCollection.doc(id).update({tempPassword: tempPassword}).then(() => {
                     res.json({status: 200, message: 'mail send please check your inbox'});
                 }).catch(err => {
                     res.json({status: 404, message: 'failed in connection please try again'});

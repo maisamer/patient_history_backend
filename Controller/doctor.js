@@ -11,9 +11,11 @@ exports.add = (req,res,next)=>{
     let rate = 0;
     let posRate = 0;
     let negRate = 0;
+    let globalId = Math.random().toString(36).substring(7);
     var passsword =`${Math.random().toString(36).substring(7)}_${Date.now()}`;
     if(experienceYear != null && experienceYear != undefined &&name != null && name != undefined && email != null && email != undefined && phone != null && phone != undefined && major != null && major != undefined && licenceNumber != null && licenceNumber != undefined){
         let item ={
+            globalId:globalId,
             posRate:posRate,
             negRate:negRate,
             rate:rate,
@@ -66,6 +68,19 @@ exports.rate = (req,res,next)=>{
             res.json({status: 404, message: err});
         })
 
+    }else{
+        res.json({status: 404, message: 'missing data'});
+    }
+};
+// get doctor by globalId
+exports.get = (req,res,next)=>{
+    let id = req.body.id;
+    if(id != null && id != undefined){
+        model.getWithId(id).then(ref=>{
+            res.json({status: 200, message: 'user found successfully',user:ref});
+        }).catch(err=>{
+            res.json({status: 404, message: 'error in connection please try again'});
+        })
     }else{
         res.json({status: 404, message: 'missing data'});
     }

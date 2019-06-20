@@ -24,7 +24,7 @@ router.post('/register',function (req,res,next) {
     var email = req.body.email;
     var city = req.body.city;
     var capital = req.body.capital;
-    let password = Math.random().toString(36).substring(7);
+    let password = `${Math.random().toString(36).substring(7)}_${Date.now()}`;
     //console.log(phone,address,email,city,capital);
     if (username != null && username != undefined && password != null && password != undefined && address != null && address != undefined && phone != null && phone != undefined && email != null && email != undefined&& city != null && city != undefined&& capital != null && capital != undefined) {
         configration.checkEmail('hospital',email).then(success=>{
@@ -237,13 +237,13 @@ router.post('/updatephone',function (req,res,next){
 })
 router.post('/forgetPassword',function (req,res,next) {
     let username = req.body.username;
-    configration.checkUsername('hospital',username).then(success=> {
+    configration.checkUsername('hospital',username).then(id=> {
         configration.getEmail('hospital', success).then(email => {
             //console.log(success);
             let tempPassword = Math.random().toString(36).substring(7);
             mail.sendEmail(email, tempPassword).then(success => {
                 // add temp password
-                hospiatalCollection.doc(success).update({tempPassword: tempPassword}).then(() => {
+                hospiatalCollection.doc(id).update({tempPassword: tempPassword}).then(() => {
                     res.json({status: 200, message: 'mail send please check your inbox'});
                 }).catch(err => {
                     res.json({status: 404, message: 'failed in connection please try again'});
