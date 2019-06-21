@@ -1,8 +1,9 @@
-var admin = require("firebase-admin");
+const admin = require("firebase-admin");
 const db = admin.firestore();
 const collection = db.collection('patient-account');
 const conf = require('../Controller/configration');
 const model = require('../Model/disease');
+let FieldValue = require('firebase-admin').firestore.FieldValue;
 
 // register
 exports.insert=(item)=>{
@@ -18,25 +19,8 @@ exports.insert=(item)=>{
 exports.get=(username,password)=>{
     return new Promise((resolve, reject) => {
         conf.checkUsername('patient-account',username).then(id=>{
-            collection.doc(id).get()
-                .then(doc => {
-                    if (!doc.exists) {
-                        console.log('No such document!');
-                        reject('No such document!');
-                    } else {
-                        if(password==doc.data().passsword){
-                            resolve(doc.data);
-                        }else{
-                            console.log('wrong password');
-                            reject('wrong password');
-                        }
-                    }
+            let Ref = collection.doc(id);
 
-                })
-                .catch(err => {
-                    console.log('Error getting documents', err);
-                    reject('Error getting documents');
-                });
         }).catch(err=>{
             reject('invalid username');
         })

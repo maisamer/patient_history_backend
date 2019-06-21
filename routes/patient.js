@@ -137,5 +137,8 @@ router.post('/add',multer.single('file'),function (req,res,next) {
 
 });
 router.post('/search',control.searchById);
+router.post('/login',control.login);
+router.post('/register',control.register);
+router.post('/');
 
 module.exports = router;

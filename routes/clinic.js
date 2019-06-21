@@ -111,12 +111,9 @@ router.post('/login',function (req,res,next) {
                             return res.json({status: 404, message: 'Error in db connection'});
                         });
                         });
-                }).then(result => {
-                    console.log('Transaction success!');
-                }).catch(err => {
-                    console.log('Transaction failure:', err);
+                }).catch(result => {
                     return res.json({status: 404, message: 'username does not exist'});
-                });
+                })
 
     }else{
         return res.json({status: 404, message: 'missing data'});
