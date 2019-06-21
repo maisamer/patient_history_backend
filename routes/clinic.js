@@ -124,7 +124,7 @@ router.post('/login',function (req,res,next) {
 })
 router.post('/delete',function (req,res,next){
     var username = req.body.username;
-    checkUsername('clinic',username).then(success=>{
+    configration.checkUsername('clinic',username).then(success=>{
         clinicColl.doc(success).delete().then(()=>{
             res.json({status: 200, message: 'clinic delete successfully'});
         })

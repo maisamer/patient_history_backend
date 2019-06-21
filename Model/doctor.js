@@ -89,6 +89,7 @@ exports.get=(username,password)=>{
 exports.delete=(username)=>{
     return new Promise((resolve, reject) => {
         conf.checkUsername('doctor-account',username).then(id=>{
+            console.log(id);
             collection.doc(id).delete().then(()=>{
                 resolve('item deleted successfully');
             }).catch(err=>{

@@ -4,10 +4,11 @@ var admin = require("firebase-admin");
 var mail = require('../Controller/Email');
 const configration = require('../Controller/configration');
 const patient = require('../Controller/patient');
-const medicine = require('../Controller/medicine')
+const medicine = require('../Controller/medicine');
 let FieldValue = require('firebase-admin').firestore.FieldValue;
 const db = admin.firestore();
 const pharmacyCollection = db.collection('pharmacy');
+const controller = require('../Controller/pharmacy');
 
 // add pharmacy
 router.post('/register',function (req,res,next) {
@@ -17,7 +18,7 @@ router.post('/register',function (req,res,next) {
     var email = req.body.email;
     var city = req.body.city;
     var capital = req.body.capital;
-    var countCorrectConfirmation = 0;
+    var comments = 0;
     let password = Math.random().toString(36).substring(7);
     //console.log(phone,address,email,city,capital);
     if (username != null && username != undefined && password != null && password != undefined && address != null && address != undefined && phone != null && phone != undefined && email != null && email != undefined&& city != null && city != undefined&& capital != null && capital != undefined) {
@@ -38,7 +39,7 @@ router.post('/register',function (req,res,next) {
                         phone: phone,
                         city: city,
                         capital: capital,
-                        countCorrectConfirmation:countCorrectConfirmation
+                        comments:comments
                     })
                         .then(ref => {
                             console.log('Added document with ID: ', ref.id);
@@ -243,6 +244,8 @@ router.post('/showmedicine',function (req,res,next) {
         res.json({status:404,message:'missing user id'});
     }
 
-})
+});
+router.post('/randomPatient',controller.get);
+router.post('comment',controller.comment);
 
 module.exports = router;

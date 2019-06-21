@@ -89,7 +89,7 @@ exports.delete = (req,res,next)=>{
   let username = req.body.username;
   if(username != null && username != undefined){
       model.delete(username).then(ref=>{
-          res.json({status: 200, message: 'user deleted successfully check your inbox'});
+          res.json({status: 200, message: 'user deleted successfully'});
       }).catch(err=>{
           res.json({status: 404, message: 'error in connection please try again'});
       })

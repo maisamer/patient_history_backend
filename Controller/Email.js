@@ -1,11 +1,17 @@
 var nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
+    host: "outmail.abc.co.th", // hostname
+    secure: false, // use SSL
+    port: 25, // port for secure SMTP,
     secure: true,
     service: 'gmail',
     auth: {
         user: 'patienthistoryteam@gmail.com',
         pass: 'gp team 2019'
+    },
+    tls: {
+        rejectUnauthorized: false
     }
 });
 

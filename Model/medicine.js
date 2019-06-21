@@ -30,8 +30,8 @@ exports.getMedicineDisease=(diseaseId)=>{
             }
             else {
                 docs.forEach(doc => {
-                    //console.log(doc.id, '=>', doc.data());
-                    items.push(doc.id,doc.data());
+                    console.log(doc.id, '=>', doc.data());
+                    items.push({id:doc.id,medicine:doc.data()});
                 })
                 resolve(items);
             }

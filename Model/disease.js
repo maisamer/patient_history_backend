@@ -1,6 +1,6 @@
 var admin = require("firebase-admin");
 const db = admin.firestore();
-const collection = db.collection('diseases');
+const collection = db.collection('disease');
 
 exports.insert=(item)=>{
     return new Promise((resolve, reject) => {
@@ -32,16 +32,18 @@ exports.delete=(id)=>{
 // get all diseases related to patient
 exports.get=(username)=>{
     return new Promise((resolve, reject) => {
+        console.log('username ',username);
         collection.where('username','==',username).get().then(docs=>{
+
             let items = [];
             if (docs.empty) {
                 console.log('No matching document.');
-                reject('no posts here');
+                reject('no disease here');
             }
             else {
                 docs.forEach(doc => {
                     //console.log(doc.id, '=>', doc.data());
-                    items.push(doc.id,doc.data());
+                    items.push({id:doc.id,info:doc.data()});
                 })
                 resolve(items);
             }

@@ -136,6 +136,6 @@ router.post('/add',multer.single('file'),function (req,res,next) {
 }
 
 });
-router.post('/login',)
+router.post('/search',control.searchById);
 
 module.exports = router;

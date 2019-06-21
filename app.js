@@ -3,7 +3,13 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+var admin = require("firebase-admin");
+const serviceAccountPath = "C://Users//go//Downloads//patient-history-c41dda1dd688.json";
+var serviceAccount = require(serviceAccountPath);
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    storageBucket: "patient-history-12cb8.appspot.com"
+});
 var doctorRouter = require('./routes/doctor');
 var patentRouter = require('./routes/patient');
 var adminRouter = require('./routes/conAdmin');
