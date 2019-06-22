@@ -46,7 +46,7 @@ exports.add = (req,res,next)=>{
 };
 exports.login = (req,res,next)=>{
     let username = req.body.username;
-    let password = req.body.passsword;
+    let password = req.body.password;
     if(username != null && username != undefined && password != null && password != undefined) {
         model.get(username,password).then(sucess=>{
             res.json({status: 200, user : sucess});

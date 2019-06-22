@@ -68,7 +68,7 @@ exports.get=(username,password)=>{
                         reject('No such document!');
                     } else {
                         if(password==doc.data().passsword){
-                            resolve(doc.data);
+                            resolve(doc.data());
                         }else{
                             console.log('wrong password');
                             reject('wrong password');

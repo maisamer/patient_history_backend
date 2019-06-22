@@ -49,7 +49,8 @@ router.post('/register',function (req,res,next) {
     } else {
         res.json({status: 404, message: 'uncompleted params request'});
     }
-})
+});
+// login
 router.post('/login',function (req,res,next) {
     const username = req.body.username;
     const password = req.body.password;
@@ -63,7 +64,7 @@ router.post('/login',function (req,res,next) {
                         .then(doc => {
                             if(password==doc.data().password) {
                                 if(doc.data().tempPassword == undefined){
-                                    return res.json({status: 200, message: 'clinic found', userdata: doc.data()});
+                                    return res.json({status: 200, user: doc.data()});
                                 } else{
                                     // delete temp password
                                     // Remove the 'temp password' field from the document
@@ -73,11 +74,11 @@ router.post('/login',function (req,res,next) {
                                         var clinic = {
                                             username:doc.data().username,
                                             password:password,
-                                            adress:doc.data().address,
+                                            address:doc.data().address,
                                             phone:doc.data().phone,
                                             doctor: doc.data().doctor
                                         };
-                                        res.json({status: 200, message: 'clinic found', userdata:clinic });
+                                        res.json({status: 200, user:clinic });
                                     }).catch(rej=>{
                                         return res.json({status: 404, message: 'temp password not deleted'});
                                     })
@@ -97,7 +98,7 @@ router.post('/login',function (req,res,next) {
                                         phone:doc.data().phone,
                                         doctor: doc.data().doctor
                                     };
-                                    return res.json({status: 200, message: 'clinic found', userdata: clinic});
+                                    return res.json({status: 200, user: clinic});
                                 }).catch(err=>{
                                     return res.json({status: 404, message: 'clinic not found'});
                                 })

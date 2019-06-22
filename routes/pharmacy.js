@@ -246,6 +246,6 @@ router.post('/showmedicine',function (req,res,next) {
 
 });
 router.post('/randomPatient',controller.get);
-router.post('comment',controller.comment);
+router.post('/comment',controller.comment);
 
 module.exports = router;

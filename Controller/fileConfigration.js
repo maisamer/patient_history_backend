@@ -1,5 +1,39 @@
 var admin = require("firebase-admin");
 const bucket = admin.storage().bucket();
+
+exports.downloadFil = async function (filename) {
+    const {Storage} = require('@google-cloud/storage');
+    var projectId = "patient-history-12cb8";
+    var keyFilename ="C://Users//go//Downloads//patient-history-c41dda1dd688.json";
+    const storage = new Storage({projectId, keyFilename});
+    return new Promise((resolve, reject) => {
+        try {
+            const bucket = storage.bucket('patient-history-12cb8.appspot.com');
+            const file = bucket.file(filename);
+            file.download(function (err, contents) {
+                if (err) {
+                    console.log(err);
+                    reject(err);
+                } else
+                    console.log('content ', contents);
+                    resolve(contents);
+                // image
+                /*fs.writeFile('image.png', contents,function(err, result){
+                    if(err){
+                        console.log(err);
+                    }else{
+                        console.log(result);
+                    }
+                });*/
+
+            });
+
+        } catch (err) {
+            console.error('ERROR:', err);
+            reject(err);
+        }
+    });
+};
 exports.uploadFileToStorage = (file) => {
     return new Promise((resolve, reject) => {
         if (!file) {
@@ -30,4 +64,4 @@ exports.uploadFileToStorage = (file) => {
 
         blobStream.end(file.buffer);
     });
-}
+};

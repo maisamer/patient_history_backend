@@ -77,3 +77,23 @@ exports.getDoctorById = (collection_name,username)=>{
             });
     });
 };
+exports.getUser = (collection_name,username)=>{
+    return new Promise((resolve, reject) => {
+        db.collection(collection_name).where('username', '==', username).get()
+            .then(snapshot => {
+                if (snapshot.empty) {
+                    console.log('No matching document.');
+                    reject('No matching document');
+                }
+
+                snapshot.forEach(doc => {
+                    console.log(doc.id)
+                    resolve({id:doc.id,url:doc.data().url});
+                });
+            })
+            .catch(err => {
+                console.log('Error getting documents', err);
+                reject('Error getting documents');
+            });
+    });
+};

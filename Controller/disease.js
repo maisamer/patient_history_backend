@@ -1,18 +1,21 @@
-var model = require('../Model/family_Diseases');
+var model = require('../Model/disease');
 
 exports.add = (req,res,next)=>{
-    let username = req.body.username;
+    let username = req.body.username; // patient username
     let description = req.body.description;
     let name = req.body.name;
     let date = new Date();
-    if(name != null && name != undefined && description != null && description != undefined && username != null && username != undefined ){
+    let doctor = req.body.doctor ;//doctor username
+    if(name != null && name != undefined && description != null && description != undefined && username != null && username != undefined && doctor != null && doctor != undefined){
         let item = {
+            doctor:doctor,
             description:description,
             name:name,
             date : date,
             username:username
         };
         model.insert(item).then(success=>{
+            console.log(success);
             res.json({status:200,message:'disease added successfully',id:success});
         }).catch(err=>{
             res.json({status:404,message:'error in connection please try again'});
@@ -23,7 +26,7 @@ exports.add = (req,res,next)=>{
     }
 };
 exports.update = (req,res,next)=> {
-    let id = req.body.id;    let username = req.body.username;
+    let id = req.body.id;
     let description = req.body.description;
     let name = req.body.name;
     if(name != null && name != undefined && description != null && description != undefined && id != null && id != undefined ){

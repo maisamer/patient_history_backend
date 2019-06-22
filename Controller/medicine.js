@@ -14,14 +14,16 @@ exports.getMedicineDisease =(req,res,next)=>{
     }
 };
 exports.add =(req,res,next)=>{
+    let username = req.body.username;
     let diseaseId = req.body.diseaseId;
     let name = req.body.name;
     let treatment_for =req.body.treatment_for;
     let dose = req.body.dose;
     let times = req.body.times;
     let interval = req.body.interval;
-    if(diseaseId != null && diseaseId != undefined && name != null && name != undefined && treatment_for != null && treatment_for!= null && dose != null && dose != undefined && times !=null && times != undefined && interval != null && interval != undefined){
+    if(username != null && username != undefined && diseaseId != null && diseaseId != undefined && name != null && name != undefined && treatment_for != null && treatment_for!= null && dose != null && dose != undefined && times !=null && times != undefined && interval != null && interval != undefined){
         var item ={
+            username:username,
             diseaseId:diseaseId,
             name:name,
             treatment_for:treatment_for,

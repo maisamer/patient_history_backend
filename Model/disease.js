@@ -53,3 +53,13 @@ exports.get=(username)=>{
         });
     });
 };
+
+exports.getUsername=(id)=>{
+    return new Promise((resolve, reject) => {
+        collection.doc(id).get().then(ref=>{
+            resolve(ref.data().username);
+        }).catch(err=>{
+            reject('error in db connection');
+        })
+    });
+};

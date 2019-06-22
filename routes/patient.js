@@ -21,48 +21,6 @@ const multer = Multer({
         fileSize: 1 * 1024 * 1024 // no larger than 5mb, you can change as needed.
     }
 });
-async function downloadFile() {
-    const {Storage} = require('@google-cloud/storage');
-    var projectId = "patient-history-12cb8";
-    var keyFilename ="C://Users//go//Downloads//patient-history-c41dda1dd688.json";
-    const storage = new Storage({projectId, keyFilename});
-
-
-    try {
-        const bucket = storage.bucket('patient-history-12cb8.appspot.com');
-        const file = bucket.file('ThinkBIG! Summer internships 2019.pdf');
-        file.download(function(err, contents) {
-            if(err){
-                console.log(err);
-            }else
-            console.log('content ',contents);
-            // image
-            /*fs.writeFile('image.png', contents,function(err, result){
-                if(err){
-                    console.log(err);
-                }else{
-                    console.log(result);
-                }
-            });*/
-            //pdf
-
-
-        });
-
-    } catch (err) {
-        console.error('ERROR:', err);
-    }
-}
-async function readPDF(buffer) {
-
-    const pdf = await pdfjs.getDocument({data: buffer});
-    console.log(pdf);
-    // ...
-}
-
-router.post('/update',function (req,res,next) {
-    downloadFile();
-});
 router.get('/', function(req, res, next) {
     let name ;
     let password;
@@ -77,33 +35,7 @@ router.get('/', function(req, res, next) {
     });
 
 });
-router.post('/login',function (req,res,next) {
-    var username = req.body.username;
-    var password = req.body.password;
-    patientCollection.where('username', '==',username).where('password','==',password).get()
-        .then(snapshot => {
-            if (snapshot.empty) {
-                console.log('No matching documents.');
-                return res.json({status:404,message:'user not found'});
-            }
-
-            snapshot.forEach(doc => {
-                console.log(doc.id, '=>', doc.data());
-                // download image
-
-
-                }).catch(function(error) {
-                    // Handle any errors
-                    console.log('error here',error);
-                });
-                return res.json({status:200,message:'user found',userdata:doc.data()});
-            })
-        .catch(err => {
-            console.log('Error getting documents', err);
-        });
-
-});
-router.post('/add',multer.single('file'),function (req,res,next) {
+router.post('/updateprofilepicture',multer.single('file'),function (req,res,next) {
     //console.log(req.file);
     let file = req.file;
     let username = req.body.username;
@@ -138,7 +70,8 @@ router.post('/add',multer.single('file'),function (req,res,next) {
 });
 router.post('/search',control.searchById);
 router.post('/login',control.login);
+router.post('/addpatientdata',control.addInf);
 router.post('/register',control.register);
-router.post('/');
+router.post('/profilePicture',multer.single('file'),control.updateProfilePicture);
 
 module.exports = router;
