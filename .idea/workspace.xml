@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="46550de5-da8f-4174-ad4c-b748b6414586" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/doctor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/Model/doctor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/doctor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/pharmacy.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/pharmacy.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +44,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/pharmacy.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/doctor.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -55,7 +62,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/doctor.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -69,6 +76,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="104" column="22" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller/pharmacy.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-90">
+              <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -114,7 +130,6 @@
         <option value="$PROJECT_DIR$/Model/disease.js" />
         <option value="$PROJECT_DIR$/Controller/medicine.js" />
         <option value="$PROJECT_DIR$/Model/medicine.js" />
-        <option value="$PROJECT_DIR$/routes/pharmacy.js" />
         <option value="$PROJECT_DIR$/Model/pharmacy.js" />
         <option value="$PROJECT_DIR$/Controller/pharmacy.js" />
         <option value="$PROJECT_DIR$/Controller/Email.js" />
@@ -145,6 +160,7 @@
         <option value="$PROJECT_DIR$/Model/doctor.js" />
         <option value="$PROJECT_DIR$/Controller/doctor.js" />
         <option value="$PROJECT_DIR$/routes/doctor.js" />
+        <option value="$PROJECT_DIR$/routes/pharmacy.js" />
       </list>
     </option>
   </component>
@@ -255,7 +271,7 @@
       <workItem from="1561102577049" duration="8486000" />
       <workItem from="1561117405523" duration="24689000" />
       <workItem from="1561154358937" duration="5914000" />
-      <workItem from="1561188039366" duration="29564000" />
+      <workItem from="1561188039366" duration="31081000" />
     </task>
     <task id="LOCAL-00001" summary="lab function">
       <created>1560639346919</created>
@@ -446,11 +462,25 @@
       <option name="project" value="LOCAL" />
       <updated>1561219089673</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="add permission function to doctor">
+      <created>1561220309649</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1561220309650</updated>
+    </task>
+    <task id="LOCAL-00029" summary="add name property">
+      <created>1561221159860</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1561221159860</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="337147000" />
+    <option name="totallyTimeSpent" value="338664000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -553,8 +583,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="clinic functions" />
-    <MESSAGE value="hospital functions" />
     <MESSAGE value="session functions" />
     <MESSAGE value="Physical Exam functions" />
     <MESSAGE value="allergies functions" />
@@ -578,7 +606,9 @@
     <MESSAGE value="edit physical exam function" />
     <MESSAGE value="edit allergies and dietary function" />
     <MESSAGE value="add permission function to patient" />
-    <option name="LAST_COMMIT_MESSAGE" value="add permission function to patient" />
+    <MESSAGE value="add permission function to doctor" />
+    <MESSAGE value="add name property" />
+    <option name="LAST_COMMIT_MESSAGE" value="add name property" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Model/files.js">
@@ -647,20 +677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/pharmacy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="245" lean-forward="true" selection-start-line="245" selection-end-line="245" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/pharmacy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -923,6 +939,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="109" selection-start-line="9" selection-start-column="109" selection-end-line="9" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/pharmacy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90">
+          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/pharmacy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
         </state>
       </provider>
     </entry>

@@ -40,7 +40,8 @@ router.post('/register',function (req,res,next) {
                         phone: phone,
                         city: city,
                         capital: capital,
-                        comments:comments
+                        comments:comments,
+                        name:name
                     })
                         .then(ref => {
                             console.log('Added document with ID: ', ref.id);
