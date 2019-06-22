@@ -2,6 +2,7 @@ let model = require('../Model/patient');
 let conf = require('../Controller/configration');
 let mail = require('../Controller/Email');
 let fileConfig = require('../Controller/fileConfigration');
+let follow = require('../Model/follow');
 
 /*
  globalId
@@ -147,6 +148,23 @@ exports.updateProfilePicture=(req,res,next)=>{
             })
         }).catch(err=>{
             res.json({status:404,message:err});
+        })
+    }else{
+        res.json({status:404,message:'missing data'});
+    }
+};
+exports.givePermission=(req,res,next)=> {
+    let doctorUsername = req.body.doctorUsername;
+    let patientUsername = req.body.patientUsername;
+    if(doctorUsername != null && doctorUsername != undefined && patientUsername != null && patientUsername != null){
+        follow.checkPermision(doctorUsername,patientUsername).then(success=>{
+            follow.insert({doctorUsername:doctorUsername,patientUsername:patientUsername}).then(success=>{
+                res.json({status:200,message:'done'});
+            }).catch(err=>{
+                res.json({status:404,message:'error in connection please try again'});
+            })
+        }).catch(err=>{
+            res.json({status:404,message:'already follow'});
         })
     }else{
         res.json({status:404,message:'missing data'});
