@@ -425,4 +425,111 @@ exports.getPhysicalExam=(username)=>{
             });
     });
 };
+exports.addAllergies=(item,username)=>{
+    return new Promise((resolve, reject) => {
+        // console.log('here',username);
+        conf.checkUsername('patient-account',username).then(id => {
+            collection.doc(id).update({Allergies:item}).then(() => {
+                console.log('item updated successfully');
+                resolve('item updated successfully');
+            }).catch(err => {
+                console.log('error in updating item');
+                reject('error in updating item');
+            })
+        }).catch(err => {
+            console.log('username does not exist');
+            reject('username does not exist');
+        })
+    });
+};
+exports.deleteAllergies=(username)=>{
+    return new Promise((resolve, reject) => {
+        // console.log('here',username);
+        conf.checkUsername('patient-account',username).then(id => {
+            collection.doc(id).update({Allergies:FieldValue.delete()}).then(() => {
+                console.log('item updated successfully');
+                resolve('item updated successfully');
+            }).catch(err => {
+                console.log('error in updating item');
+                reject('error in updating item');
+            })
+        }).catch(err => {
+            console.log('username does not exist');
+            reject('username does not exist');
+        })
+    });
+};
+exports.getAllergies=(username)=>{
+    return new Promise((resolve, reject) => {
+        collection.where('username', '==', username).get()
+            .then(snapshot => {
+                if (snapshot.empty) {
+                    console.log('No matching document.');
+                    reject('No matching document');
+                }
 
+                snapshot.forEach(doc => {
+                    console.log(doc.id)
+                    resolve(doc.data().Allergies);
+                });
+            })
+            .catch(err => {
+                console.log('Error getting documents', err);
+                reject('Error getting documents');
+            });
+    });
+};
+exports.addDietaryInformation=(item,username)=>{
+    return new Promise((resolve, reject) => {
+        // console.log('here',username);
+        conf.checkUsername('patient-account',username).then(id => {
+            collection.doc(id).update({DietaryInformation:item}).then(() => {
+                console.log('item updated successfully');
+                resolve('item updated successfully');
+            }).catch(err => {
+                console.log('error in updating item');
+                reject('error in updating item');
+            })
+        }).catch(err => {
+            console.log('username does not exist');
+            reject('username does not exist');
+        })
+    });
+};
+exports.deleteADietaryInformation=(username)=>{
+    return new Promise((resolve, reject) => {
+        // console.log('here',username);
+        conf.checkUsername('patient-account',username).then(id => {
+            collection.doc(id).update({DietaryInformation:FieldValue.delete()}).then(() => {
+                console.log('item updated successfully');
+                resolve('item updated successfully');
+            }).catch(err => {
+                console.log('error in updating item');
+                reject('error in updating item');
+            })
+        }).catch(err => {
+            console.log('username does not exist');
+            reject('username does not exist');
+        })
+    });
+};
+exports.getDietaryInformation=(username)=>{
+    return new Promise((resolve, reject) => {
+        collection.where('username', '==', username).get()
+            .then(snapshot => {
+                if (snapshot.empty) {
+                    console.log('No matching document.');
+                    reject('No matching document');
+                }
+
+                snapshot.forEach(doc => {
+                    console.log(doc.id);
+                    resolve(doc.data().DietaryInformation);
+                });
+            })
+            .catch(err => {
+                console.log('Error getting documents', err);
+                reject('Error getting documents');
+            });
+    });
+};

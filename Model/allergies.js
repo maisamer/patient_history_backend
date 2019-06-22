@@ -34,3 +34,25 @@ exports.deleteAllergies =(id)=>{
             });
     });
 };
+// get all allergies
+exports.get =(username)=> {
+    return new Promise((resolve, reject) => {
+        collection.where('username', '==', username).get()
+            .then(snapshot => {
+                if (snapshot.empty) {
+                    console.log('No matching document.');
+                    reject('No matching document');
+                }else {
+                    var items = [];
+                    snapshot.forEach(doc => {
+                        items.push(doc.data());
+                    });
+                    resolve(items);
+                }
+            })
+            .catch(err => {
+                console.log('Error getting documents', err);
+                reject('Error getting documents');
+            });
+    });
+};
