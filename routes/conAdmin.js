@@ -6,7 +6,7 @@ var admin = require("firebase-admin");
 const db = admin.firestore();
 const adminColl = db.collection('admin');
 // log in
-router.get('/login', function(req, res, next) {
+router.post('/login', function(req, res, next) {
     let username = req.body.username ;
     let password = req.body.password;
     adminColl.where('username', '==',username).where('password','==',password).get()
