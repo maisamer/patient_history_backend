@@ -20,8 +20,9 @@ router.post('/register',function (req,res,next) {
     var capital = req.body.capital;
     var comments = 0;
     let password = Math.random().toString(36).substring(7);
+    let name = req.body.name;
     //console.log(phone,address,email,city,capital);
-    if (username != null && username != undefined && password != null && password != undefined && address != null && address != undefined && phone != null && phone != undefined && email != null && email != undefined&& city != null && city != undefined&& capital != null && capital != undefined) {
+    if (name != null && name != undefined && username != null && username != undefined && password != null && password != undefined && address != null && address != undefined && phone != null && phone != undefined && email != null && email != undefined&& city != null && city != undefined&& capital != null && capital != undefined) {
         configration.checkEmail('pharmacy',email).then(success=>{
             res.json({status: 404, message: 'this email is already exist'});
         }).catch(err=>{
