@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46550de5-da8f-4174-ad4c-b748b6414586" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Model/follow.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/patient.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/patient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/patient.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/patient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/doctor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/Model/doctor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/doctor.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,19 +47,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controller/patient.js">
+        <entry file="file://$PROJECT_DIR$/Controller/doctor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="166" column="56" selection-start-line="166" selection-start-column="56" selection-end-line="166" selection-end-column="56" />
+            <state relative-caret-position="203">
+              <caret line="104" column="50" selection-start-line="104" selection-start-column="50" selection-end-line="104" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/patient.js">
+        <entry file="file://$PROJECT_DIR$/routes/doctor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+            <state relative-caret-position="153">
+              <caret line="9" column="109" selection-start-line="9" selection-start-column="109" selection-end-line="9" selection-end-column="109" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model/doctor.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="104" column="22" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -94,15 +103,12 @@
         <option value="$PROJECT_DIR$/routes/medicine.js" />
         <option value="$PROJECT_DIR$/routes/hostpital.js" />
         <option value="$PROJECT_DIR$/routes/lab.js" />
-        <option value="$PROJECT_DIR$/routes/doctor.js" />
         <option value="$PROJECT_DIR$/bin/www" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/Model/comments.js" />
         <option value="$PROJECT_DIR$/Controller/fileConfigration.js" />
         <option value="$PROJECT_DIR$/Model/files.js" />
         <option value="$PROJECT_DIR$/Controller/configration.js" />
-        <option value="$PROJECT_DIR$/Model/doctor.js" />
-        <option value="$PROJECT_DIR$/Controller/doctor.js" />
         <option value="$PROJECT_DIR$/routes/clinic.js" />
         <option value="$PROJECT_DIR$/Controller/disease.js" />
         <option value="$PROJECT_DIR$/Model/disease.js" />
@@ -136,6 +142,9 @@
         <option value="$PROJECT_DIR$/Model/follow.js" />
         <option value="$PROJECT_DIR$/Controller/patient.js" />
         <option value="$PROJECT_DIR$/routes/patient.js" />
+        <option value="$PROJECT_DIR$/Model/doctor.js" />
+        <option value="$PROJECT_DIR$/Controller/doctor.js" />
+        <option value="$PROJECT_DIR$/routes/doctor.js" />
       </list>
     </option>
   </component>
@@ -246,7 +255,7 @@
       <workItem from="1561102577049" duration="8486000" />
       <workItem from="1561117405523" duration="24689000" />
       <workItem from="1561154358937" duration="5914000" />
-      <workItem from="1561188039366" duration="28304000" />
+      <workItem from="1561188039366" duration="29564000" />
     </task>
     <task id="LOCAL-00001" summary="lab function">
       <created>1560639346919</created>
@@ -430,11 +439,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561216343278</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="add permission function to patient">
+      <created>1561219089673</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1561219089673</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="335887000" />
+    <option name="totallyTimeSpent" value="337147000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -446,7 +462,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2738255" />
@@ -537,7 +553,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="lab function" />
     <MESSAGE value="clinic functions" />
     <MESSAGE value="hospital functions" />
     <MESSAGE value="session functions" />
@@ -562,7 +577,8 @@
     <MESSAGE value="edit remedies function" />
     <MESSAGE value="edit physical exam function" />
     <MESSAGE value="edit allergies and dietary function" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit allergies and dietary function" />
+    <MESSAGE value="add permission function to patient" />
+    <option name="LAST_COMMIT_MESSAGE" value="add permission function to patient" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Model/files.js">
@@ -582,27 +598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
           <caret line="62" column="37" lean-forward="true" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/doctor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/doctor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="48" column="32" lean-forward="true" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/doctor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" column="48" lean-forward="true" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -875,13 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/follow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="51" column="27" lean-forward="true" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controller/fileConfigration.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -889,24 +877,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/configration.js">
+    <entry file="file://$PROJECT_DIR$/Model/follow.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        <state relative-caret-position="290">
+          <caret line="51" column="27" lean-forward="true" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Controller/patient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="166" column="56" selection-start-line="166" selection-start-column="56" selection-end-line="166" selection-end-column="56" />
+        <state relative-caret-position="981">
+          <caret line="169" column="54" lean-forward="true" selection-start-line="169" selection-start-column="54" selection-end-line="169" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/patient.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+        <state relative-caret-position="216">
+          <caret line="71" column="7" selection-start-line="71" selection-start-column="7" selection-end-line="71" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/doctor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="104" column="22" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/configration.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/doctor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="104" column="50" selection-start-line="104" selection-start-column="50" selection-end-line="104" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/doctor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="109" selection-start-line="9" selection-start-column="109" selection-end-line="9" selection-end-column="109" />
         </state>
       </provider>
     </entry>

@@ -1,5 +1,6 @@
 var model = require('../Model/doctor');
 var mail = require('../Controller/Email');
+let follow = require('../Model/follow');
 exports.add = (req,res,next)=>{
     var username =`${Math.random().toString(36).substring(7)}_${Date.now()}`;
     let name = req.body.name;
@@ -76,7 +77,7 @@ exports.rate = (req,res,next)=>{
 exports.get = (req,res,next)=>{
     let id = req.body.id;
     if(id != null && id != undefined){
-        model.getWithId(id).then(ref=>{
+        model.getById(id).then(ref=>{
             res.json({status: 200, message: 'user found successfully',user:ref});
         }).catch(err=>{
             res.json({status: 404, message: 'error in connection please try again'});
@@ -96,4 +97,16 @@ exports.delete = (req,res,next)=>{
   }else{
       res.json({status: 404, message: 'missing data'});
   }
+};
+exports.getAllPatient=(req,res,next)=>{
+    let doctorUsername = req.body.doctorUsername;
+    if(doctorUsername != null && doctorUsername !=undefined){
+        follow.getAllPatient(doctorUsername).then(success=>{
+            res.json({status: 404, patient:success});
+        }).catch(err=>{
+            res.json({status: 404, message: 'no patient'});
+        })
+    }else{
+        res.json({status: 404, message: 'missing data'});
+    }
 };

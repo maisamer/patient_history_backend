@@ -101,28 +101,25 @@ exports.delete=(username)=>{
 
     });
 };
-exports.getWithId=(id)=>{
+// searchById
+exports.getById=(id)=>{
     return new Promise((resolve, reject) => {
-        conf.getDoctorById('doctor-account',username).then(id=>{
-            collection.doc(id).get()
-                .then(doc => {
-                    if (!doc.exists) {
-                        console.log('No such document!');
-                        reject('No such user!');
-                    } else {
-                        // image download
-                        resolve(doc.data());
-                    }
+        collection.where('globalId', '==', id).get()
+            .then(snapshot => {
+                if (snapshot.empty) {
+                    console.log('No matching document.');
+                    reject('No matching document');
+                }
 
-                })
-                .catch(err => {
-                    console.log('Error getting documents', err);
-                    reject('Error getting documents');
+                snapshot.forEach(doc => {
+                    console.log(doc.id)
+                    resolve(doc.data());
                 });
-        }).catch(err=>{
-            reject('id not found')
-        })
-
+            })
+            .catch(err => {
+                console.log('Error getting documents', err);
+                reject('Error getting documents');
+            });
     });
 };
 
