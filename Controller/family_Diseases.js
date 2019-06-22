@@ -1,6 +1,4 @@
 var model = require('../Model/family_Diseases');
-
-// add post
 exports.add = (req,res,next)=>{
     let username = req.body.username;
     let relatives = req.body.relatives;
@@ -14,7 +12,7 @@ exports.add = (req,res,next)=>{
             username:username
         };
         model.insert(item).then(success=>{
-            res.json({status:200,message:'post added successfully',id:success});
+            res.json({status:200,message:'item added successfully',id:success});
         }).catch(err=>{
             res.json({status:404,message:'error in connection please try again'});
         })
@@ -57,7 +55,7 @@ exports.get = (req,res,next)=> {
     let username = req.body.username;
     if(username != null && username != undefined ) {
         model.get(username).then(success => {
-            res.json({status: 200, posts: success});
+            res.json({status: 200, family_diseases: success});
         }).catch(err => {
             res.json({status: 404, message: 'error in connection please try again'});
         })

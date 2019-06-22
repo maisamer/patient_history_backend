@@ -15,7 +15,6 @@ router.post('/login', function(req, res, next) {
                 console.log('No matching documents.');
                 return res.json({status:404,message:'user not found'});
             }
-
             snapshot.forEach(doc => {
                 console.log(doc.id, '=>', doc.data());
                 return res.json({status:200,message:'user found',userdata:doc.data()});

@@ -37,7 +37,7 @@ exports.get=(username)=>{
             let items = [];
             if (docs.empty) {
                 console.log('No matching document.');
-                reject('no posts here');
+                reject('there is no family diseases added to this patient');
             }
             else {
                 docs.forEach(doc => {
