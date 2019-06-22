@@ -61,11 +61,11 @@ exports.registrationMailPlace = (mail,username,password)=>{
 };
 exports.commentPharmacy = (mail,pharmacyName,comment)=>{
     return new Promise((resolve, reject) => {
-        var text = pharmacyName +' comment on your medicines and comment is ( ' +comment+ ' please review these comment with your doctor ';
+        var text = pharmacyName +' pharmacy comment on your medicines and comment is ( ' +comment+ ' ) please review these comment with your doctor ';
         var mailOptions = {
             from: 'patienthistoryteam@gmail.com',
             to: mail,
-            subject: 'Confirmation',
+            subject: 'DoctorCom notification',
             text: text
         };
         transporter.sendMail(mailOptions, function (error, info) {

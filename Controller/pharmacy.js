@@ -25,7 +25,11 @@ exports.comment =(req,res,next)=> {
             comment:des,
             pharmacyId:pharmacy
         };
-        //patient.sendEmail(pharmacy,user,comment);
+        patient.sendEmail(pharmacy,user,des).then(success=>{
+            console.log('here',success)
+        }).catch(err=>{
+            console.log('here',err);
+        })
         comment.insert(item).then(sucess=>{
 
             patient.comment(user).then(com=>{

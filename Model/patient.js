@@ -221,15 +221,26 @@ exports.addMedicine = (diseaseId)=>{
   })
 };
 exports.sendEmail=(id,userId,comment)=>{
-    let pharmacyName = pharmacy.getPharmacyName(id);
-    getEmailByGlobalId(userId).then(email=>{
-        if(pharmacyName != null||pharmacyName != undefined && email != null && email != undefined) {
-            console.log('in mail sending process ',email,pharmacyName,comment);
-            mail.commentPharmacy(email, pharmacyName, comment);
-        }
-    }).catch(err=>{
-        console.log('error in sending mail process');
-    })
+
+    return new Promise((resolve, reject) => {
+        pharmacy.getPharmacyName(id).then(pharmacyName=>{
+            getEmailByGlobalId(userId).then(email => {
+                mail.commentPharmacy(email, pharmacyName, comment).then(success => {
+                    console.log('in mail sending process ', email, pharmacyName, comment);
+                    resolve(success);
+                }).catch(err => {
+                    reject(err);
+                })
+
+            }).catch(err => {
+                console.log('error in sending mail process');
+                reject('error in sending mail process');
+            })
+        }).catch(err=>{
+            reject(err);
+        })
+
+    });
 
 };
 getEmailByGlobalId = (id)=>{

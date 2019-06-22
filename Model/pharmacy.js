@@ -4,18 +4,21 @@ const collection = db.collection('pharmacy');
 const patient = require('../Model/patient');
 const medicine = require('../Model/medicine');
 exports.getPharmacyName=(id)=>{
-
-    collection.doc(id).get().then(doc=>{
-        console.log(doc.data().name);
-        return doc.data().name;
+    console.log('pharmacy id is',id);
+    return new Promise((resolve, reject) => {
+        collection.doc(id).get().then(doc => {
+            console.log(doc.data().name);
+            resolve(doc.data().name);
+        }).catch(err => {
+            reject(err);
+        })
     });
-    return null;
 };
 exports.updateComment=(id)=>{
     return new Promise((resolve, reject) => {
         collection.doc(id).get().then(doc=>{
             collection.doc(doc.id).update({comments:doc.data().comments+1}).then(()=>{
-                resolve(doc.data().comments);
+                resolve(doc.data().comments+1);
             }).catch(err=>{
                 console.log(err);
                 reject(err);
