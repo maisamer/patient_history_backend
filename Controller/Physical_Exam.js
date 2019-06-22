@@ -67,3 +67,28 @@ exports.deletePhysicalExam = (req,res,next)=>{
     }
 
 };
+exports.getPhysicalExam = (req,res,next)=>{
+    let username = req.body.username;
+    if( username != null && username != undefined){
+        patientModel.getPhysicalExam(username).then(item=>{
+            res.json({status:200,physicalExam:item});
+        }).catch(err=>{
+            res.json({status:404,message:err});
+        })
+    }else{
+        res.json({status:404,message:'missing data'});
+    }
+};
+// get all physical exam related to user
+exports.get = (req,res,next)=>{
+    let username = req.body.username;
+    if( username != null && username != undefined){
+        physicalExamModel.get(username).then(item=>{
+            res.json({status:200,physicalExam:item});
+        }).catch(err=>{
+            res.json({status:404,message:err});
+        })
+    }else{
+        res.json({status:404,message:'missing data'});
+    }
+};
