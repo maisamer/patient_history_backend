@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="46550de5-da8f-4174-ad4c-b748b6414586" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/Social Habit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/Social Habit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/family_Diseases.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/family_Diseases.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Social Habit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Social Habit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/family_Diseases.js" beforeDir="false" afterPath="$PROJECT_DIR$/Model/family_Diseases.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller/Remedies.js" beforeDir="false" afterPath="$PROJECT_DIR$/Controller/Remedies.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Remedies.js" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Remedies.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/patient.js" beforeDir="false" afterPath="$PROJECT_DIR$/Model/patient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/Social Habit.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/Social Habit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/conAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/conAdmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/Remedies.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/Remedies.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,53 +37,7 @@
     <favorites_list name="patient_history_backend" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/Social Habit.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Controller/Social Habit.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="100" column="10" lean-forward="true" selection-start-line="100" selection-start-column="10" selection-end-line="100" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/Social Habit.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/patient.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="317" column="7" lean-forward="true" selection-start-line="317" selection-start-column="7" selection-end-line="317" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controller/configration.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="20" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -114,9 +65,6 @@
         <option value="$PROJECT_DIR$/Controller/dietary Information.js" />
         <option value="$PROJECT_DIR$/routes/dietary Information.js" />
         <option value="$PROJECT_DIR$/Model/patient_Remedies.js" />
-        <option value="$PROJECT_DIR$/Model/Remedies.js" />
-        <option value="$PROJECT_DIR$/Controller/Remedies.js" />
-        <option value="$PROJECT_DIR$/routes/Remedies.js" />
         <option value="$PROJECT_DIR$/Controller/session.js" />
         <option value="$PROJECT_DIR$/routes/post.js" />
         <option value="$PROJECT_DIR$/Controller/post.js" />
@@ -154,10 +102,13 @@
         <option value="$PROJECT_DIR$/Model/patient_family_disease.js" />
         <option value="$PROJECT_DIR$/Controller/family_Diseases.js" />
         <option value="$PROJECT_DIR$/Model/family_Diseases.js" />
-        <option value="$PROJECT_DIR$/Model/patient.js" />
         <option value="$PROJECT_DIR$/routes/Social Habit.js" />
         <option value="$PROJECT_DIR$/Model/Social Habit.js" />
         <option value="$PROJECT_DIR$/Controller/Social Habit.js" />
+        <option value="$PROJECT_DIR$/Model/Remedies.js" />
+        <option value="$PROJECT_DIR$/Model/patient.js" />
+        <option value="$PROJECT_DIR$/routes/Remedies.js" />
+        <option value="$PROJECT_DIR$/Controller/Remedies.js" />
       </list>
     </option>
   </component>
@@ -268,7 +219,7 @@
       <workItem from="1561102577049" duration="8486000" />
       <workItem from="1561117405523" duration="24689000" />
       <workItem from="1561154358937" duration="5914000" />
-      <workItem from="1561188039366" duration="20249000" />
+      <workItem from="1561188039366" duration="21646000" />
     </task>
     <task id="LOCAL-00001" summary="lab function">
       <created>1560639346919</created>
@@ -417,11 +368,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561205060253</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="edit social habit function">
+      <created>1561211077780</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1561211077780</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="327832000" />
+    <option name="totallyTimeSpent" value="329229000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -434,7 +392,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2738255" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -545,30 +502,10 @@
     <MESSAGE value="add comment function in pharmacy" />
     <MESSAGE value="edit admin login in pharmacy" />
     <MESSAGE value="edit admin login function" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit admin login function" />
+    <MESSAGE value="edit social habit function" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit social habit function" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Model/Remedies.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/post.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="31" selection-end-line="53" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/post.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="24" lean-forward="true" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/ad.js" />
     <entry file="file://$PROJECT_DIR$/Model/ads.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -848,13 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/patient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="317" column="7" lean-forward="true" selection-start-line="317" selection-start-column="7" selection-end-line="317" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/Social Habit.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -871,15 +801,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/Social Habit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+        <state relative-caret-position="44">
+          <caret line="37" selection-start-line="37" selection-end-line="57" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/Remedies.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="57" column="2" selection-start-line="57" selection-start-column="2" selection-end-line="57" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/Remedies.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/Remedies.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="92" column="34" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Controller/Social Habit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="100" column="10" lean-forward="true" selection-start-line="100" selection-start-column="10" selection-end-line="100" selection-end-column="10" />
+        <state relative-caret-position="170">
+          <caret line="80" selection-start-line="80" selection-end-line="103" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/patient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="363" column="39" lean-forward="true" selection-start-line="363" selection-start-column="39" selection-end-line="363" selection-end-column="39" />
         </state>
       </provider>
     </entry>
