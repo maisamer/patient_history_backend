@@ -134,7 +134,7 @@ exports.getRandomUser =()=>{
             else {
                 docs.forEach(doc => {
                     //console.log(doc.id, '=>', doc.data());
-                    resolve(doc.data().username);
+                    resolve({id:doc.data().globalId,username:doc.data().username});
                 });
             }
 

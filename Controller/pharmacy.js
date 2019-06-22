@@ -3,7 +3,7 @@ const model = require('../Model/pharmacy');
 const comment = require('../Model/comments');
 
 
-// get all medicines related to patient
+// get all medicines related to random patient
 exports.get =(req,res,next)=> {
     model.getRandomPation().then((medicine)=>{
         //console.log('medicine : ' ,medicine);
@@ -27,7 +27,9 @@ exports.comment =(req,res,next)=> {
         };
         //patient.sendEmail(pharmacy,user,comment);
         comment.insert(item).then(sucess=>{
+
             patient.comment(user).then(com=>{
+                console.log('patient table : ',com);
                 model.updateComment(pharmacy).then(num=>{
                     res.json({status:200,comments:num});
                 }).catch(err=>{
