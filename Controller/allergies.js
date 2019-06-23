@@ -1,9 +1,10 @@
 let allerModel = require('../Model/allergies');
 let patientModel = require('../Model/patient');
 exports.addAllergies = (req,res,next)=>{
-    let patient = req.body.username;
-    let name = req.body.name;
-    let date = req.body.date;
+    let patient = req.body.username; // patient username
+    let name = req.body.name; // allergies name
+    let date = new Date();
+    
     if(patient != null && patient != undefined && name != null && name != undefined &&  date != null && date != undefined){
         let item = {
             username:patient,

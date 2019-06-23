@@ -23,7 +23,7 @@ exports.getAllPatient=(doctorUsername)=>{
                     var users = [];
                     snapshot.forEach(doc => {
                         console.log(doc.id);
-                        users.push(doc.data().patientUsername);
+                        users.push({username:doc.data().patientUsername,name:doc.data().name});
                     });
                     resolve(users);
                 }

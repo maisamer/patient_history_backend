@@ -99,10 +99,11 @@ exports.delete = (req,res,next)=>{
   }
 };
 exports.getAllPatient=(req,res,next)=>{
-    let doctorUsername = req.body.doctorUsername;
+    let doctorUsername = req.body.username;
+    console.log('doctor usernnaem : ',doctorUsername);
     if(doctorUsername != null && doctorUsername !=undefined){
         follow.getAllPatient(doctorUsername).then(success=>{
-            res.json({status: 404, patient:success});
+            res.json({status: 200, mai:success});
         }).catch(err=>{
             res.json({status: 404, message: 'no patient'});
         })
@@ -110,3 +111,4 @@ exports.getAllPatient=(req,res,next)=>{
         res.json({status: 404, message: 'missing data'});
     }
 };
+

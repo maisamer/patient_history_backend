@@ -28,6 +28,8 @@ var diseaseRouter = require('./routes/disease');
 var  familyDiseaseRouter = require('./routes/family_Diseases');
 var adsRouter = require('./routes/ads');
 var medicineRouter = require('./routes/medicine');
+var fileRouter = require('./routes/file');
+var DietaryInformation = require('./routes/dietary Information');
 var app = express();
 
 
@@ -54,15 +56,17 @@ app.use('/pharmacy',pharmacyRouter);
 app.use('/session',sessionRouter);
 app.use('/lab',labRouter);
 app.use('/appointment',appointmentRouter);
-app.use('/physicalExam',PhysicalExamRouter);
+app.use('/physicalexam',PhysicalExamRouter);
 app.use('/socialHabit',socialHabitRouter);
 app.use('/allergies',allergiesRouter);
 app.use('/remedies',remediesRouter);
 app.use('/post',postRouter);
 app.use('/disease',diseaseRouter);
+app.use('/dietaryInformation',DietaryInformation);
 app.use('/familyDisease',familyDiseaseRouter);
 app.use('/ads',adsRouter);
 app.use('/medicine',medicineRouter);
+app.use('/file',fileRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

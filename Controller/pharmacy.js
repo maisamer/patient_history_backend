@@ -25,16 +25,14 @@ exports.comment =(req,res,next)=> {
             comment:des,
             pharmacyId:pharmacy
         };
-        patient.sendEmail(pharmacy,user,des).then(success=>{
-            console.log('here',success)
-        }).catch(err=>{
-            console.log('here',err);
-        })
+
+
         comment.insert(item).then(sucess=>{
 
             patient.comment(user).then(com=>{
-                console.log('patient table : ',com);
-                model.updateComment(pharmacy).then(num=>{
+                patient.sendEmail(pharmacy,user,des).then(id=>{
+                model.updateComment(id).then(num=>{
+
                     res.json({status:200,comments:num});
                 }).catch(err=>{
                     res.json({status:404,message:err});
@@ -45,6 +43,9 @@ exports.comment =(req,res,next)=> {
         }).catch(err=>{
             console.log(err);
             res.json({status:404,message:err});
+        })
+        }).catch(err=>{
+            console.log('here',err);
         })
     }else{
         res.json({status:404,message:'missing data'});

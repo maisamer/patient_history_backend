@@ -54,12 +54,12 @@ exports.get=(username,password)=>{
                             })
 
                         }else{
-                            return res.json({status: 404, message: 'unValid password'});
+                            reject('unValid password');
                         }
                     })
                     .catch(err => {
                         console.log('Error getting documents', err);
-                        return res.json({status: 404, message: 'Error in db connection'});
+                        reject('Error in db connection');
                     });
             });
         }).catch(err=>{
@@ -223,11 +223,11 @@ exports.addMedicine = (diseaseId)=>{
 exports.sendEmail=(id,userId,comment)=>{
 
     return new Promise((resolve, reject) => {
-        pharmacy.getPharmacyName(id).then(pharmacyName=>{
+        pharmacy.getPharmacyName(id).then(item=>{
             getEmailByGlobalId(userId).then(email => {
-                mail.commentPharmacy(email, pharmacyName, comment).then(success => {
-                    console.log('in mail sending process ', email, pharmacyName, comment);
-                    resolve(success);
+                mail.commentPharmacy(email, item.name, comment).then(success => {
+                    console.log('in mail sending process ', email, item.name, comment);
+                    resolve(item.id);
                 }).catch(err => {
                     reject(err);
                 })

@@ -69,6 +69,7 @@ exports.get=(username,password)=>{
                     } else {
                         if(password==doc.data().passsword){
                             resolve(doc.data());
+
                         }else{
                             console.log('wrong password');
                             reject('wrong password');
@@ -113,7 +114,7 @@ exports.getById=(id)=>{
 
                 snapshot.forEach(doc => {
                     console.log(doc.id)
-                    resolve(doc.data());
+                    resolve(doc.data().username);
                 });
             })
             .catch(err => {
@@ -122,4 +123,23 @@ exports.getById=(id)=>{
             });
     });
 };
+exports.getGlobalId=(username)=>{
+    return new Promise((resolve, reject) => {
+        collection.where('username', '==', username).get()
+            .then(snapshot => {
+                if (snapshot.empty) {
+                    console.log('No matching document.');
+                    reject('No matching document');
+                }
 
+                snapshot.forEach(doc => {
+                    console.log(doc.id)
+                    resolve(doc.data().globalId);
+                });
+            })
+            .catch(err => {
+                console.log('Error getting documents', err);
+                reject('Error getting documents');
+            });
+    });
+};

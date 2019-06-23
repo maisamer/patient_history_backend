@@ -6,7 +6,7 @@ exports.add = (req,res,next)=>{
     let restrictions = req.body.restrictions;
     let suplemenets = req.body.suplemenets;
     let stimulants = req.body.stimulants;
-    let date = req.body.date;
+    let date = new Date();
     if(stimulants!= null && stimulants!= undefined && patient != null && patient != undefined &&restrictions != null && restrictions != undefined && suplemenets != null && suplemenets != undefined && date != null && date != undefined){
         let PhysicalExam = {
             username:patient,

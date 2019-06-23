@@ -3,9 +3,9 @@ let patientModel = require('../Model/patient');
 
 exports.addPhysicalExam = (req,res,next)=>{
     let patient = req.body.username;
-    let blood_pressure = req.body.blood_pressure;
-    let heart_rate = req.body.heart_rate;
-    let date = req.body.date;
+    let blood_pressure = req.body.bloodPressure;
+    let heart_rate = req.body.heartRate;
+    let date = new Date();
     if(patient != null && patient != undefined &&blood_pressure != null && blood_pressure != undefined && heart_rate != null && heart_rate != undefined && date != null && date != undefined){
         let PhysicalExam = {
             username:patient,

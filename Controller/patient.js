@@ -3,6 +3,7 @@ let conf = require('../Controller/configration');
 let mail = require('../Controller/Email');
 let fileConfig = require('../Controller/fileConfigration');
 let follow = require('../Model/follow');
+let doctorModel = require('../Model/doctor');
 
 /*
  globalId
@@ -154,19 +155,27 @@ exports.updateProfilePicture=(req,res,next)=>{
     }
 };
 exports.givePermission=(req,res,next)=> {
-    let doctorUsername = req.body.doctorUsername;
-    let patientUsername = req.body.patientUsername;
-    if(doctorUsername != null && doctorUsername != undefined && patientUsername != null && patientUsername != null){
-        follow.checkPermision(doctorUsername,patientUsername).then(success=>{
-            follow.insert({doctorUsername:doctorUsername,patientUsername:patientUsername}).then(success=>{
-                res.json({status:200,message:'done'});
+    let patientUsername = req.body.username;
+    let name = req.body.name;
+    let id = req.body.doctorusername;
+    if(name != null && name != undefined && id!= null && id != undefined && patientUsername != null && patientUsername != null){
+        doctorModel.getById(id).then(doctorUsername=>{
+            follow.checkPermision(doctorUsername,patientUsername).then(success=>{
+                follow.insert({doctorUsername:doctorUsername,patientUsername:patientUsername,name:name}).then(success=>{
+                    res.json({status:200,message:'done'});
+                }).catch(err=>{
+                    res.json({status:404,message:'error in connection please try again'});
+                })
             }).catch(err=>{
-                res.json({status:404,message:'error in connection please try again'});
+                res.json({status:404,message:'already follow'});
             })
         }).catch(err=>{
-            res.json({status:404,message:'already follow'});
+            console.log(err);
+            res.json({status:404,message:err});
         })
+
     }else{
+        console.log('missing data');
         res.json({status:404,message:'missing data'});
     }
 };

@@ -3,15 +3,24 @@ const db = admin.firestore();
 const collection = db.collection('pharmacy');
 const patient = require('../Model/patient');
 const medicine = require('../Model/medicine');
-exports.getPharmacyName=(id)=>{
-    console.log('pharmacy id is',id);
+exports.getPharmacyName=(username)=>{
     return new Promise((resolve, reject) => {
-        collection.doc(id).get().then(doc => {
-            console.log(doc.data().name);
-            resolve(doc.data().name);
-        }).catch(err => {
-            reject(err);
-        })
+        collection.where('username', '==', username).get()
+            .then(snapshot => {
+                if (snapshot.empty) {
+                    console.log('No matching document.');
+                    reject('No matching document');
+                }
+
+                snapshot.forEach(doc => {
+                    console.log(doc.id)
+                    resolve({name:doc.data().name,id:doc.id});
+                });
+            })
+            .catch(err => {
+                console.log('Error getting documents', err);
+                reject('Error getting documents');
+            });
     });
 };
 exports.updateComment=(id)=>{

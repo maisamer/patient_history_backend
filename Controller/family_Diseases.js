@@ -1,8 +1,8 @@
 var model = require('../Model/family_Diseases');
 exports.add = (req,res,next)=>{
     let username = req.body.username;
-    let relatives = req.body.relatives;
-    let name = req.body.name;
+    let relatives = req.body.patientRelative;
+    let name = req.body.diseaseName;
     let date = new Date();
     if(name != null && name != undefined && relatives != null && relatives != undefined && username != null && username != undefined ){
         let item = {

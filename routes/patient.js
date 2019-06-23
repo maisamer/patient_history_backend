@@ -72,7 +72,7 @@ router.post('/search',control.searchById);
 router.post('/login',control.login);
 router.post('/addpatientdata',control.addInf);
 router.post('/register',control.register);
-router.post('/permission',control.givePermission);
+router.post('/permission',control.givePermission); //
 router.post('/profilePicture',multer.single('file'),control.updateProfilePicture);
 
 module.exports = router;

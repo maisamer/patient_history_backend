@@ -6,8 +6,8 @@ exports.addSocial_habit = (req,res,next)=>{
     let patientUsername = req.body.username;
     let tobacco = req.body.tobacco;
     let alcohol = req.body.alcohol;
-    let illicit_drugs = req.body.illicit_drugs;
-    let date = req.body.date;
+    let illicit_drugs = req.body.illicitDrugs;
+    let date = new Date();
     if(patientUsername != null && patientUsername != undefined && tobacco != null && tobacco != undefined && alcohol != null && alcohol != undefined && date != null && date != undefined
         && illicit_drugs !=null && illicit_drugs!= undefined){
         let social_habit = {

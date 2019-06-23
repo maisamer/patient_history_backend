@@ -14,7 +14,7 @@ exports.getMedicineDisease =(req,res,next)=>{
     }
 };
 exports.add =(req,res,next)=>{
-    let username = req.body.username;
+    let username = req.body.username; // patient username
     let diseaseId = req.body.diseaseId;
     let name = req.body.name;
     let treatment_for =req.body.treatment_for;
