@@ -26,7 +26,6 @@ exports.comment =(req,res,next)=> {
             pharmacyId:pharmacy
         };
 
-
         comment.insert(item).then(sucess=>{
 
             patient.comment(user).then(com=>{
